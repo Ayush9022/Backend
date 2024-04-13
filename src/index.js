@@ -1,4 +1,5 @@
 import { urlencoded } from "express";
+import { app } from "./app.js";
 import connectDB from "./db/index.js";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -11,7 +12,7 @@ const port = process.env.PORT || 800;
 
 connectDB()
   .then(() => {
-    application.listen(port, () => {
+    app.listen(port, () => {
       console.log(`server is listening at port : ${port}`);
     });
   })
