@@ -10,6 +10,8 @@ dotenv.config({
 
 const port = process.env.PORT || 800;
 
+// console.log(process.env.CLOUDINARY_CLOUD_NAME);
+
 connectDB()
   .then(() => {
     app.listen(port, () => {
